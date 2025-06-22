@@ -162,3 +162,139 @@ Risk Management
 USE_ATR_SIZING = True                       # Dynamic stop losses
 TRAILING_STOP_ACTIVATION_PERCENT = 1.5      # TSL activates at 1.5% profit
 LOSS_CIRCUIT_BREAKER_THRESHOLD = 0.8       # Stop at 20% portfolio loss
+
+## 🌐 VPS Deployment (24/7 Trading)
+
+### Why Use a VPS?
+- **24/7 Operation** - Bot runs continuously even when your computer is off
+- **Stable Internet** - Reliable connection for trading
+- **Remote Access** - Monitor from anywhere
+- **Cost Effective** - Basic VPS costs $5-10/month
+
+### Recommended VPS Providers
+- **Oracle Cloud** (Free tier available)
+- **DigitalOcean** ($5/month minimum)
+- **Vultr** ($3.50/month minimum)
+- **Linode** ($5/month minimum)
+
+### VPS Specifications Needed
+- **RAM**: 1GB minimum (2GB recommended)
+- **Storage**: 25GB minimum
+- **OS**: Ubuntu 20.04 or 22.04 LTS
+- **CPU**: 1 vCPU sufficient
+
+---
+
+## 🚀 VPS Setup Step-by-Step
+
+### Step 1: Create VPS Instance
+1. Choose your provider and create account
+2. **Select Ubuntu 20.04 or 22.04 LTS**
+3. **Choose smallest plan** (1GB RAM sufficient)
+4. **Note your VPS IP address and root password**
+
+### Step 2: Connect to VPS
+```bash
+# Windows (use PuTTY or Windows Terminal)
+ssh root@your-vps-ip-address
+
+# macOS/Linux
+ssh root@your-vps-ip-address
+Step 3: Initial Server Setup
+Copy# Update package manager
+sudo apt update && sudo apt upgrade -y
+
+# Install Python and required packages
+sudo apt install python3 python3-pip python3-venv git screen -y
+
+# Create non-root user (recommended)
+adduser trader
+usermod -aG sudo trader
+su - trader
+Step 4: Install Trading Bot
+Copy# Clone repository
+git clone https://github.com/hellcatxrp/hybrid-crypto-trading-bot.git
+cd hybrid-crypto-trading-bot
+
+# Create virtual environment
+python3 -m venv .venv
+source .venv/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Configure environment
+cp TEMPLATE.env .env
+nano .env  # Edit with your API keys
+Step 5: Run Bot Persistently
+Copy# Start screen session
+screen -S trading-bot
+
+# Activate environment and run bot
+source .venv/bin/activate
+python HellcatTrades_v2.py
+
+# Detach from screen (keeps bot running)
+# Press: Ctrl+A, then D
+Step 6: Managing the Bot
+Copy# Reattach to see bot output
+screen -r trading-bot
+
+# List screen sessions
+screen -ls
+
+# Stop bot safely (preserves holdings)
+# Reattach first, then Ctrl+C
+
+# Force stop without liquidation
+pgrep -f HellcatTrades_v2.py
+kill -9 [PID]
+🔧 VPS Maintenance
+Regular Tasks
+Copy# Check bot status
+screen -r trading-bot
+
+# View recent logs
+tail -f logs/trading_bot.log
+
+# Update bot (when new versions available)
+git pull origin main
+pip install -r requirements.txt --upgrade
+Troubleshooting
+Copy# If bot crashes, check logs
+cat logs/trading_bot.log | tail -50
+
+# Restart bot after crash
+screen -S trading-bot
+source .venv/bin/activate
+python HellcatTrades_v2.py
+Security Best Practices
+Change default SSH port (optional but recommended)
+Use SSH keys instead of passwords
+Enable firewall with only necessary ports open
+Regular backups of .env file (securely)
+Monitor resource usage to prevent overload
+💡 VPS Tips
+Cost Optimization
+Start with smallest instance, upgrade if needed
+Oracle Cloud offers permanent free tier
+Monitor monthly costs and usage
+Performance Monitoring
+Copy# Check memory usage
+free -h
+
+# Check CPU usage
+top
+
+# Check disk space
+df -h
+Backup Strategy
+Copy# Backup configuration
+cp .env ~/backup-env-$(date +%Y%m%d)
+
+# Backup logs periodically
+tar -czf logs-backup-$(date +%Y%m%d).tar.gz logs/
+
+
+
+
