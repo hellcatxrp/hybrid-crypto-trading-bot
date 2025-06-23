@@ -50,7 +50,7 @@ CHART_LOOKBACK_PERIOD = 96  # 24 hours of 15-minute candles (4 candles/hour * 24
 SLEEP_INTERVAL_SECONDS = int(os.environ.get('SLEEP_INTERVAL_SECONDS', '60'))
 MAX_CONCURRENT_POSITIONS = 7  
 PRICE_DISCREPANCY_ALERT_THRESHOLD_PERCENT = Decimal('0.5') # Log if live ticker and kline close differ by this %
-WATCHLIST = ['HBARUSDC', 'LINKUSDC', 'AVAXUSDC', 'SUIUSDC', 'XRPUSDC', 'MUBARAKUSDC', 'VIRTUALUSDC']  # Default watchlist - configure to your preference
+WATCHLIST = ['BTCUSDC', 'ETHUSDC', 'AVAXUSDC', 'SUIUSDC', 'XRPUSDC', 'MUBARAKUSDC', 'VIRTUALUSDC']  # Default watchlist - configure to your preference
 
 # Enhanced Risk Management
 LOSS_CIRCUIT_BREAKER_THRESHOLD = Decimal('0.8')  # Pause if balance drops below 80% of initial
@@ -62,21 +62,21 @@ BREAKOUT_COOLDOWN_HOURS = 12 # Cooldown period in hours before another breakout 
 USE_ATR_SIZING = True  # NEW: Set to True to use ATR based sizing
 
 # NEW: Strategy-Specific Position Sizing
-TREND_POSITION_SIZE = Decimal('0.10')  # 10% - set these all according to your own preference
-MEAN_REVERT_POSITION_SIZE = Decimal('0.10')  # 10% 
-BREAKOUT_POSITION_SIZE = Decimal('0.15')  # 15% 
+TREND_POSITION_SIZE = Decimal('0.35')  # 35% - set these all according to your own preference
+MEAN_REVERT_POSITION_SIZE = Decimal('0.35')  # 35% 
+BREAKOUT_POSITION_SIZE = Decimal('0.35')  # 35% 
 
 # NEW: Trailing Stop Settings
-TRAILING_STOP_ACTIVATION_PERCENT = Decimal('1.5')  # Activate trailing stop after 1% profit
-TRAILING_STOP_LOCKIN_PROFIT_PERCENT = Decimal('1.0') # NEW: Set TSL to lock in this % profit from entry when activated *can not prevent slippage
+TRAILING_STOP_ACTIVATION_PERCENT = Decimal('1.3')  # Activate trailing stop after 1.3% profit
+TRAILING_STOP_LOCKIN_PROFIT_PERCENT = Decimal('0.7') # NEW: Set TSL to lock in this % profit from entry when activated *can not prevent slippage
 
 # Strategy Specific TP/SL Percentages (from entry price)
-TREND_TP = Decimal('2.0')  # OPTIMIZED
+TREND_TP = Decimal('2.4')  # OPTIMIZED
 TREND_SL = Decimal('2.7')  # OPTIMIZED
-MEAN_REVERT_TP = Decimal('2.0')  # OPTIMIZED
+MEAN_REVERT_TP = Decimal('2.5')  # OPTIMIZED
 MEAN_REVERT_SL = Decimal('2.7')  # OPTIMIZED
-BREAKOUT_TP = Decimal('3.0')  # OPTIMIZED
-BREAKOUT_SL = Decimal('4.5')  # OPTIMIZED
+BREAKOUT_TP = Decimal('3.5')  # OPTIMIZED
+BREAKOUT_SL = Decimal('2.8')  # OPTIMIZED
 
 # NEW: Enhanced Volume Validation Parameters
 VOLUME_PRICE_CORRELATION_THRESHOLD = Decimal('0.002')  # 0.2% price change threshold
@@ -98,10 +98,10 @@ EMA_SHORT_PERIOD = 20
 EMA_MEDIUM_PERIOD = 50
 EMA_LONG_PERIOD = 200
 RSI_PERIOD = 14
-RSI_OVERSOLD = Decimal('26.0')  # Configure at your discretion
+RSI_OVERSOLD = Decimal('24.0')  # Configure at your discretion
 RSI_EXIT = Decimal('55.0')  
 ADX_PERIOD = 14
-ADX_BREAKOUT_THRESHOLD = Decimal('25.0')  # Configure at your discretion
+ADX_BREAKOUT_THRESHOLD = Decimal('32.0')  # Configure at your discretion
 VOLUME_SMA_PERIOD = 20
 ATR_PERIOD = 14
 BBANDS_PERIOD = 20  # For Bollinger Bands
