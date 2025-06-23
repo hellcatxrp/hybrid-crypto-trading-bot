@@ -71,7 +71,7 @@ Most bots use simple `volume > average` validation, which can't distinguish betw
 ### 1. Prerequisites
 - Python 3.12+
 - Binance account with API keys
-- Telegram bot token
+- Telegram bot token & Chat ID
 
 ### 2. Installation
 ```bash
