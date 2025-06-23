@@ -299,5 +299,7 @@ tar -czf logs-backup-$(date +%Y%m%d).tar.gz logs/
 
 Have questions, want to share your results, or discuss new strategies? Join our official Discord server to connect with other users and the developer!
 
-[![Join our Discord](images/discord_button.png)](https://discord.gg/3nqZCmzwbe)
+<a href="https://discord.gg/3nqZCmzwbe">
+  <img src="images/discord_button.png" alt="Join our Discord">
+</a>
 
