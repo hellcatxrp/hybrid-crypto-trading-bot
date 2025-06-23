@@ -128,9 +128,9 @@ python trading_bot.py  // you can rename the .py file to whatever you desire. Ke
 | `/stop` | **LIQUIDATE ALL + SHUTDOWN** | ⚠️ **DANGER**: Sells everything! |
 
 ### 📊 Strategy Options for /buy Command
-- `trend` - Uses Trend strategy TP/SL (2.0%/2.7%)
-- `meanrevert` - Uses Mean Reversion TP/SL (2.0%/2.7%) 
-- `breakout` - Uses Breakout strategy TP/SL (3.0%/4.5%)
+- `trend` - Uses Trend strategy TP/SL (2.4%/2.7%)
+- `meanrevert` - Uses Mean Reversion TP/SL (2.5%/2.7%) 
+- `breakout` - Uses Breakout strategy TP/SL (3.5%/2.8%)
 - No strategy specified - Defaults to Manual (uses Breakout settings)
 
 ### 💡 Watchlist Management Examples
@@ -151,18 +151,19 @@ Entry: RSI < 26, Price < 50 EMA, Enhanced Volume
 Goal: Bounce trades from oversold levels
 Risk: Medium (counter-trend)
 Breakout Strategy
-Entry: Price > 12H high, ADX > 25, RSI > 55, Enhanced Volume
+Entry: Price > 12H high, ADX > 30, RSI > 55, Enhanced Volume
 Goal: Ride momentum breakouts
 Risk: Higher (early trend detection)
 🛠️ Advanced Configuration
 Position Sizing
-TREND_POSITION_SIZE = Decimal('0.10')      # 10% of balance
-MEAN_REVERT_POSITION_SIZE = Decimal('0.10') # 10% of balance  
-BREAKOUT_POSITION_SIZE = Decimal('0.15')    # 15% of balance
+TREND_POSITION_SIZE = Decimal('0.35')      # 35% of balance
+MEAN_REVERT_POSITION_SIZE = Decimal('0.35') # 35% of balance  
+BREAKOUT_POSITION_SIZE = Decimal('0.35')    # 35% of balance
 Risk Management
 USE_ATR_SIZING = True                       # Dynamic stop losses
-TRAILING_STOP_ACTIVATION_PERCENT = 1.5      # TSL activates at 1.5% profit
+TRAILING_STOP_ACTIVATION_PERCENT = 1.3      # TSL activates at 1.3% profit
 LOSS_CIRCUIT_BREAKER_THRESHOLD = 0.8       # Stop at 20% portfolio loss
+DRAWDOWN_CIRCUIT_BREAKER = 20.0            # Pause if drawdown exceeds 20%
 
 ## 🌐 VPS Deployment (24/7 Trading)
 
