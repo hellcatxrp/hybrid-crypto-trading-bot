@@ -4,6 +4,7 @@
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Binance](https://img.shields.io/badge/Exchange-Binance-yellow.svg)](https://binance.com)
 [![Telegram](https://img.shields.io/badge/Control-Telegram-blue.svg)](https://telegram.org)
+[![Discord](https://img.shields.io/badge/Discord-blue)](https://discord.gg/3nqZCmzwbe)
 
 > **A sophisticated cryptocurrency trading bot that prevents "falling knife" entries through advanced volume analysis**
 
@@ -295,12 +296,6 @@ cp .env ~/backup-env-$(date +%Y%m%d)
 # Backup logs periodically
 tar -czf logs-backup-$(date +%Y%m%d).tar.gz logs/
 
-## 💬 Join the Community!
-
----
+## 💬 Join the Discord Community!
 
 
-[![Discord](https://img.shields.io/badge/Discord-Join-blue)](https://discord.gg/3nqZCmzwbe)                      
-
-
----
