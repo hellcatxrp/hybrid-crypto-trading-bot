@@ -297,10 +297,10 @@ tar -czf logs-backup-$(date +%Y%m%d).tar.gz logs/
 
 ## 💬 Join the Community!
 
+---
 
 
-
-[![Discord](https://img.shields.io/badge/Discord-Join-blue)](https://discord.gg/3nqZCmzwbe)  
-
+[![Discord](https://img.shields.io/badge/Discord-Join-blue)](https://discord.gg/3nqZCmzwbe)                      
 
 
+---
