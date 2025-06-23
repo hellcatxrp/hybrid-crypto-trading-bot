@@ -299,7 +299,5 @@ tar -czf logs-backup-$(date +%Y%m%d).tar.gz logs/
 
 Have questions, want to share your results, or discuss new strategies? Join our official Discord server to connect with other users and the developer!
 
-![Discord](https://img.shields.io/discord/1327376656482177094?logo=discord&logoColor=white&style=for-the-badge )
- 
-[Join our Discord server!](https://discord.gg/3nqZCmzwbe )
+[![Join our Discord](images/discord_button.png)](https://discord.gg/3nqZCmzwbe)
 
