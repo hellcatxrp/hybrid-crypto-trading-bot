@@ -298,6 +298,8 @@ tar -czf logs-backup-$(date +%Y%m%d).tar.gz logs/
 ## 💬 Join the Community!
 
 Have questions, want to share your results, or discuss new strategies? Join our official Discord server to connect with other users and the developer!
+<a href="https://discord.gg/3nqZCmzwbe">
+  <img src="https://raw.githubusercontent.com/hellcatarp/hybrid-crypto-trading-bot/main/discord-badge.svg" alt="Join our Discord" style="height: 28px;">
+</a>
 
-[![Join our Discord](discord-badge.svg)](https://discord.gg/3nqZCmzwbe)
 
