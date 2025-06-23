@@ -296,7 +296,7 @@ cp .env ~/backup-env-$(date +%Y%m%d)
 tar -czf logs-backup-$(date +%Y%m%d).tar.gz logs/
 
 ## 💬 Join the Community!
-<a href="https://discord.gg/3nqZCmzwbe"><img src="discord_button.png"></a>
+<a href="https://discord.gg/3nqZCmzwbe"><img src="discord_button.png" alt="Join our Discord"></a>
 
 
 
