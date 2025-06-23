@@ -16,7 +16,7 @@
 
 ## 🌟 What Makes This Bot Special
 
-This isn't just another trading bot. 
+This isn't just another trading bot. Genspark called it "Institutional Grade Excellence". Download it for free and give it a try on the Testnet. 
 
 ## 🚀 Key Features
 
